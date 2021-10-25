@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+<meta name="Description" content="Ktupad MVC Framework by wawan sismadi">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta http-equiv="Cache-Control" content="public" max-age="31536000">
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="pagination.css" async>
+<title>ktupad</title>
+</head>
+<body>
+<div class = "page">
+<div id = "content"></div>
+<div id = "pagination" ></div>
+</div>
+<script type="text/javascript" src="pagination.js"></script>
+<script>
+pagination.data=[{nama:1,isi:'satu'},{nama:2,isi:'dua'},{nama:3,isi:'tiga'},];
+pagination.rpp=1;
+pagination.view('pagination');
+pagination.callback=function(page){ viewData(page)
+}
+
+function viewData(page){
+out ='<ul>';
+for (var i = (page-1) * pagination.rpp; i < (page * pagination.rpp) && i < data.length; i++) {
+out+='<li>'+data[i].isi+'</li>';}
+out+='</ul>';
+pagination.gebi('content').innerHTML=out;
+}
+viewData(1);
+</script>
+</body>
+</html>

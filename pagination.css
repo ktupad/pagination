@@ -1,0 +1,6 @@
+body {background-color: #2e597b;  margin:0 auto;  color: #000;  padding: 60px 10px 10px 10px;}
+.page{ margin:0 auto;  width: 80%; background-color: #f2f2f2; }
+
+.pagination span {padding:14px 16px; display:block; }
+.pagination button{ background-image: linear-gradient(#4da2be, #004761);
+  color:white; background:#072d3a; padding:12px 20px; border:none; border-radius:4px; cursor:pointer; margin:2px; }
